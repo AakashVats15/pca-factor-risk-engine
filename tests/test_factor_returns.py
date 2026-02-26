@@ -2,11 +2,9 @@ import numpy as np
 import pandas as pd
 import sys
 from pathlib import Path
-import sys
-from pathlib import Path
-sys.path.append(str(Path(__file__).resolve().parents[1] / "src"))
 
-sys.path.append(str(Path(__file__).resolve().parents[1] / "src"))
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
 
 from src.factors.pca.factor_returns import FactorReturns
 

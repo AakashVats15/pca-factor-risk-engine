@@ -1,6 +1,12 @@
 import numpy as np
 import pandas as pd
 from src.factors.risk.variance_decomposition import VarianceDecomposition
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+
 
 def test_variance_decomposition():
     np.random.seed(0)
