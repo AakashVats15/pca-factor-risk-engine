@@ -1,13 +1,19 @@
-import numpy as np
-import pandas as pd
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "src"))
+# Absolute path to your src folder
+SRC_PATH = Path(r"E:\Personal\GitHub\Python Code Repo\pca-factor-risk-engine\src")
+sys.path.insert(0, str(SRC_PATH))
 
-
+import numpy as np
+import pandas as pd
 from src.factors.pca.pca_model import PCAModel
+
+
+import numpy as np
+import pandas as pd
+from src.factors.pca.pca_model import PCAModel
+
 
 def test_pca_basic():
     np.random.seed(0)
@@ -18,6 +24,7 @@ def test_pca_basic():
     assert len(pca.eigenvalues) == 3
     assert pca.loadings.shape == (5, 3)
     assert np.all(np.diff(pca.eigenvalues) <= 0)
+
 
 def test_pca_transform_dimensions():
     np.random.seed(1)
