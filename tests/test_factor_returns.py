@@ -1,10 +1,5 @@
 import sys
-from pathlib import Path
-
-sys.path.insert(
-    0,
-    r"E:\Personal\GitHub\Python Code Repo\pca-factor-risk-engine\src"
-)
+sys.path.insert(0, r"E:\Personal\GitHub\Python Code Repo\pca-factor-risk-engine\src")
 
 import numpy as np
 import pandas as pd
